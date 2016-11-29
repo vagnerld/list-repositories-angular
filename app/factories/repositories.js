@@ -3,9 +3,7 @@
  * 
  * 
  */
-angular.module('app').factory('Repositories', [
-    '$http'
-    function ($http) {
+app.factory('Repositories', function ($http) {
         return {
             /*
              * Retorna json com a lista de repositórios publicos de um usuário
@@ -15,4 +13,4 @@ angular.module('app').factory('Repositories', [
             }
         };
     }
-]);
+);
