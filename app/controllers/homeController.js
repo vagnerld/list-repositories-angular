@@ -3,7 +3,7 @@
 /*
  * 
  */
-app.controller('homeController', ['$scope' 'Repositories', 
+app.controller('homeController', ['$scope', 'Repositories', 
 	function($scope, Repositories) {
 	
 		$scope.user = 'vagnerld'; // user default
