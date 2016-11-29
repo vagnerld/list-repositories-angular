@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title> SPA com Angular </title>
+    <meta charset="utf-8">
+    <!-- css -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/controllers/homeController.js"></script>
+    <script src="./app/factories/repositories.js"></script>
+  </head>
+  <body>
+    <div>
+        <!-- menu -->
+      	<ul class="nav nav-tabs">
+     	  </ul>
+        <!-- views -->
+        <div ng-view></div>
+    </div>
+  </body>
+</html>
