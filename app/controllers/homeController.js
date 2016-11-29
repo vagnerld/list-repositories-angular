@@ -17,9 +17,11 @@ app.controller('homeController', ['$scope', 'Repositories',
 		        	$scope.repositories = data;
 		        }
 		    });
-		
 		};
+
+		$scope.listRepositories();
+		
+		
 	    
-		listRepositories();
 	}]
 );
