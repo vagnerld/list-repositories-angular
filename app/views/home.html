@@ -7,7 +7,7 @@
 <div class="container">
 	<div class="cards" ng-repeat="repositorie in repositories | filter:searchRepositories" >
       <h3>{{repositorie.name}}</h3>
-      
+
       <span class="counts" title="{{repositorie.stargazers_count}} stars">
         <i class="fa fa-star-o" aria-hidden="true"></i>
         {{repositorie.stargazers_count}}
@@ -15,6 +15,9 @@
       <span class="counts" title="{{repositorie.stargazers_count}} forks">
         <i class="fa fa-code-fork" aria-hidden="true"></i>
         {{repositorie.forks_count}}
+      </span>
+      <span ng-show="repositorie.language" class="counts language">
+        {{repositorie.language}}
       </span>
 
       <p class="description">

@@ -67,6 +67,15 @@ header input {
 	float: right;
 }
 
+.cards .language {
+    border: 1px solid #21c259;
+    padding: 1px 3px;
+    border-radius: 3px;
+    color: #21c259;
+    margin-top: -18px;
+}
+
+
 .cards .profile {
 	width: 100%;
 	height: 40px;

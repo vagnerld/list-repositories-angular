@@ -13,7 +13,6 @@ app.controller('homeController', ['$scope', 'Repositories',
 		
 		    Repositories.getPublicRepositories( $scope.user ).then(function(repositorie){
 		        if ( repositorie.status == 200 ){
-		        	console.log( repositorie.data );
 		        	$scope.repositories = repositorie.data;
 		        }
 		    });
