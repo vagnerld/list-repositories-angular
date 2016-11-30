@@ -1,19 +1,29 @@
 <!-- home.html -->
-<div class="jumbotron text-center">
-    <h1>Home</h1>
+<header>
+    <h1>Repositórios do github</h1>
+    <h2>{{user}}</h2>
+    <input type="text" ng-model="searchRepositories" placeholder="Busque por repositórios">
+</header>
+<div class="container">
+	<div class="cards" ng-repeat="repositorie in repositories | filter:searchRepositories" >
 
-    <h3>teste 1</h3>
-    
-    <ul>
-      	<li ng-repeat="repositorie in repositories">
-      		{{repositorie.owner.avatar_url}}
-      		{{repositorie.owner.login}}
-			{{repositorie.owner.html_url}}
-      		
-      		{{repositorie.name}}
-      		{{repositorie.stargazers_count}}
-      		{{repositorie.forks_count}}
-  		</li>
-    </ul>
+      <h3>{{repositorie.name}}</h3>
+      <span class="counts" title="{{repositorie.stargazers_count}} stars">
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+        {{repositorie.stargazers_count}}
+      </span>
+      <span class="counts" title="{{repositorie.stargazers_count}} forks">
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        {{repositorie.forks_count}}
+      </span>
 
+      <p class="description">
+        {{repositorie.description}}
+      </p>
+
+      <div class="profile">
+        <div class="image" style="background-image:url('{{repositorie.owner.avatar_url}}');"></div>
+        {{repositorie.owner.login}}
+      </div>
+	</div>
 </div>
