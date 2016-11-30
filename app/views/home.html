@@ -6,8 +6,8 @@
 </header>
 <div class="container">
 	<div class="cards" ng-repeat="repositorie in repositories | filter:searchRepositories" >
-
       <h3>{{repositorie.name}}</h3>
+      
       <span class="counts" title="{{repositorie.stargazers_count}} stars">
         <i class="fa fa-star-o" aria-hidden="true"></i>
         {{repositorie.stargazers_count}}
