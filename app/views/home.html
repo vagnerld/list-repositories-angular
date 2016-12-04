@@ -6,27 +6,28 @@
 </header>
 <div class="container">
 	<div class="cards" ng-repeat="repositorie in repositories | filter:searchRepositories" >
-      <h3>{{repositorie.name}}</h3>
+		<h3><a href="{{repositorie.url}}">{{repositorie.name}}</a></h3>
 
-      <span class="counts" title="{{repositorie.stargazers_count}} stars">
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-        {{repositorie.stargazers_count}}
-      </span>
-      <span class="counts" title="{{repositorie.stargazers_count}} forks">
-        <i class="fa fa-code-fork" aria-hidden="true"></i>
-        {{repositorie.forks_count}}
-      </span>
-      <span ng-show="repositorie.language" class="counts language">
-        {{repositorie.language}}
-      </span>
+		<span class="counts" title="{{repositorie.stargazers_count}} stars">
+			<i class="fa fa-star-o" aria-hidden="true"></i>
+			{{repositorie.stargazers_count}}
+			</span>
+		<span class="counts" title="{{repositorie.stargazers_count}} forks">
+			<i class="fa fa-code-fork" aria-hidden="true"></i>
+			{{repositorie.forks_count}}
+		</span>
+		<span ng-show="repositorie.language" class="counts language">
+			{{repositorie.language}}
+		</span>
 
-      <p class="description">
-        {{repositorie.description}}
-      </p>
-
-      <div class="profile">
-        <div class="image" style="background-image:url('{{repositorie.owner.avatar_url}}');"></div>
-        {{repositorie.owner.login}}
-      </div>
+		<p class="description">
+			{{repositorie.description}}
+		</p>
+		<a href="{{repositorie.owner.url}}">
+			<div class="profile">
+				<div class="image" style="background-image:url('{{repositorie.owner.avatar_url}}');"></div>
+				{{repositorie.owner.login}}
+			</div>
+		</a>
 	</div>
 </div>
